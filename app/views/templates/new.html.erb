@@ -1,0 +1,27 @@
+<h2>Packets available </h2>
+<% if @template.errors.any? %>
+<h2>Errors are </h2>
+<ul>
+  <% @template.errors.full_messages.each do |msg| %>
+  <li><%=msg%></li>
+  <% end %>
+</ul>
+
+<% end %>
+<%= form_for @template do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :description %> <br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+
+<% end %>
