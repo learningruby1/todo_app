@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
-  get 'templates/index'
+  resources :formularios
+  resources :articles
 
-  get 'templates/new'
-
-  get 'templates/create'
-
-  get 'templates/show'
-
-  get 'todos/new'
 
   root 'pages#home'
 
-  get 'pages/about'
   resources :todos
   resources :templates
 

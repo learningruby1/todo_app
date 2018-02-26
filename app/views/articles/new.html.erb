@@ -1,0 +1,16 @@
+<h1>New Article</h1>
+<%= form_for @article do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </p>
+
+<% end %>
+<%= render 'form', article: @article %>
+
+<%= link_to 'Back', articles_path %>
