@@ -1,1 +1,28 @@
-<h2>todo</h2>
+<h2> Listing of Todo</h2>
+
+<!--   this will take me to the new action -->
+<p>
+  <%= link_to"Create Todo", new_todo_path%>
+</p>
+<!-- take us to the show  -->
+
+
+take us to
+
+<!--create table  -->
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.name%></td>
+      <td><%= todo.description%></td>
+      <!-- add edit EDIT_TODO GET    /todos/:id(makes the objectTODO)/edit(.:format)       todos#edit  > -->
+      <td><%= link_to "Edit", edit_todo_path(todo) %></td>
+      <td><%= link_to "Show", todo_path(todo)%></td>
+    </tr>
+  <% end %>
+</table>

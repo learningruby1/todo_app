@@ -1,1 +1,18 @@
-<h1>index</h1>
+<h1>Listing Templates </h1>
+<!-- create a table  -->
+<table>
+  <!-- create row -->
+  <tr>
+    <!-- table header -->
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <!-- create the loop -->
+  <% @templates.each do |template| %>
+    <!-- create a table row to print out  -->
+    <tr>
+      <td><%= template.name%></td>
+      <td><%= template.description%></td>
+    </tr>
+  <% end %>
+</table>
