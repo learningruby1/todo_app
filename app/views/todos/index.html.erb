@@ -23,6 +23,7 @@ take us to
       <!-- add edit EDIT_TODO GET    /todos/:id(makes the objectTODO)/edit(.:format)       todos#edit  > -->
       <td><%= link_to "Edit", edit_todo_path(todo) %></td>
       <td><%= link_to "Show", todo_path(todo)%></td>
+      <td><%=link_to "Delete", todo_path(todo), method: :delete, data: {confirm: "Are you sure?"}%></td>
     </tr>
   <% end %>
 </table>

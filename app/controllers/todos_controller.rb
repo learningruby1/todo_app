@@ -39,6 +39,14 @@ class TodosController < ApplicationController
       render 'edit'
     end
   end
+
+  def destroy
+    @todo = Todo.find(params[:id])
+    @todo.destroy
+    flash[:notice]= "Todo was successfully delete"
+    # need to go to the index path
+    redirect_to todos_path
+  end
   private
   def todo_params
     # top level after require :todo and what the table has
